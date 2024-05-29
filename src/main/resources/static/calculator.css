@@ -1,0 +1,130 @@
+html {
+    height: 100%;
+}
+
+/* html, * {
+padding: 0;
+margin: 0;
+} */
+
+body {
+    background-color: rgb(223,220,215);
+    height: 100%;
+    padding: 4px;
+}
+
+#redBox {
+    /* margin: auto; */
+    min-height: calc(100% - 16px);
+    background-color: rgb(147,38,43);
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: auto;
+    /* position: absolute;
+    top: 8px;
+    right: 8px;
+    left: 8px;
+    bottom: 8px; */
+
+}
+
+#greyBox {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(53,50,47);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    height: auto;
+    box-shadow: 0 3px 8px black;
+}
+
+#whiteBox {
+    padding: 20px;
+    padding-top: 60px;
+    height: auto;
+    background-color: white;
+}
+
+#title {
+    height: auto; 
+    font-weight: 400;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#calculator {
+    margin-top: 20px;
+    height: auto;
+    width: 70%;
+    background-color: rgb(230,236,239);
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color:rgb(206, 220, 226);
+    padding: 10px;
+    padding-top: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    display: inline-block;
+}
+
+h1 {
+    color: rgb(147,38,43);
+    font-size: 15px;
+}
+
+h2 {
+    margin-top: 25px;
+    font-size: 15px;
+    font-weight: 500;  
+}
+
+table {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid rgb(179,178,179);
+    padding: 5px;
+}
+
+th {
+    background-color: rgb(216,216,216);
+}
+
+input {
+    width: 40px;
+    height: 25px;  
+}
+
+#addRow {
+    cursor: pointer;
+}
+
+.redBtn {
+    background-color: rgb(147,38,43);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px;
+}
+
+.redBtn:hover {
+    background-color: rgb(123, 32, 37);
+    cursor: pointer;
+}
+
+.redBtn:active {
+    background-color: rgb(147,38,43);
+}
+
+#buttons {
+    float: right;
+}

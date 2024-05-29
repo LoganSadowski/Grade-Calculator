@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="redBox">
+        <div id="greyBox">
+            <div id="whiteBox">
+                <header id="title">Grade Calculator</header>
+                <div id="calculator">
+                    <h1>Activities</h1>
+                    <h2>Give grades to the numeric activities</h2>
+                    <form>
+                        <table>
+                            <tr><th>Name</th><th>Short Name</th><th>Weight</th><th>Grade</th><th>Percent</th></tr>
+                            <!-- <tr id="row1"><td>Activity 1</td><td>A1</td><td><input name="weight" class="weight" type="number"></td><td><input name="gradeNum" class="gradeNum" type="number"> / <input name="gradeDenom" class="gradeDenom" type="number"></td><td class="percent"></td></tr> -->
+                            <tr class="row"><td>Activity 1</td><td>A1</td><td><input name="weight" class="weight" type="number"></td><td><input name="gradeNum" class="gradeNum" type="number"> / <input name="gradeDenom" class="gradeDenom" type="number"></td><td class="percent"></td></tr>
+                        </table>
+                    </form>
+                    <button id="addRow">ADD ROW</button>
+                    <h1>Result</h1>
+                    <h3 id="result"></h3>
+                    <div id="buttons"><button class="redBtn" id="weighted">WEIGHTED</button><button class="redBtn" id="mean">MEAN</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
