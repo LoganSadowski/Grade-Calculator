@@ -12,14 +12,18 @@ function changePercent(rowNum) {
 
     // Add a listener to update the percent when the numerator is changed
     numerator[0].addEventListener('input', function() {
-        if (denominator[0].value != 0) {
+        if (!numerator[0].value || !denominator[0].value || denominator[0].value == 0) {
+            percent[0].innerHTML = '';
+        } else {
             percent[0].innerHTML = Math.round(numerator[0].value/denominator[0].value*10000)/100 + "%";
         }
     });
 
     // Add a listener to update the percent when the denominator is changed
     denominator[0].addEventListener('input', function() {
-        if (denominator[0].value != 0) {
+        if (!numerator[0].value || !denominator[0].value || denominator[0].value == 0) {
+            percent[0].innerHTML = '';
+        } else {
             percent[0].innerHTML = Math.round(numerator[0].value/denominator[0].value*10000)/100 + "%";
         }
     });
@@ -94,10 +98,12 @@ weighted.addEventListener('click', function() {
     // Holds the sum of the weights
     let weight = 0;
 
-    // Find the sum of the weights and the sum of each percentage multplied by its weight
+    // Find the sum of the weights and the sum of each percentage multiplied by its weight
     for (let i = 0; i < numRows - 1; i++) {
-        weight += Number(rows[i].getElementsByClassName("weight")[0].value);
-        total += rows[i].getElementsByClassName("weight")[0].value * Number(rows[i].getElementsByClassName("percent")[0].innerHTML.replace('%',''));
+        if (rows[i].getElementsByClassName("percent")[0].innerHTML) {
+            weight += Number(rows[i].getElementsByClassName("weight")[0].value);
+            total += rows[i].getElementsByClassName("weight")[0].value * Number(rows[i].getElementsByClassName("percent")[0].innerHTML.replace('%',''));
+        }
     }
 
     // If the total weight is not 0, display the calculated weighted grade
